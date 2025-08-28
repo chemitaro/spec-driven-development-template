@@ -19,7 +19,7 @@
 
 ```bash
 # テンプレートをクローン
-git clone https://github.com/[your-username]/spec-driven-development-template.git your-project-name
+git clone https://github.com/chemitaro/spec-driven-development-template.git your-project-name
 
 # プロジェクトディレクトリに移動
 cd your-project-name
