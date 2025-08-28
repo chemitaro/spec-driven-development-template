@@ -15,15 +15,32 @@
 
 ### 1. プロジェクトの初期化
 
-このテンプレートをコピーして、新しいプロジェクトを開始します：
+このテンプレートリポジトリをクローンして、新しいプロジェクトを開始します：
 
 ```bash
-# テンプレートをコピー
-cp -r ~/workspace/template/spec-driven-development /path/to/your-project
+# テンプレートをクローン
+git clone https://github.com/[your-username]/spec-driven-development-template.git your-project-name
 
 # プロジェクトディレクトリに移動
-cd /path/to/your-project
+cd your-project-name
+
+# Gitの履歴をリセット（新しいプロジェクトとして開始）
+rm -rf .git
+git init
+git add .
+git commit -m "Initial commit from spec-driven-development template"
+
+# 自分のリポジトリを設定
+git remote add origin https://github.com/[your-username]/[your-project-name].git
+git push -u origin main
 ```
+
+または、GitHubの「Use this template」機能を使用：
+
+1. テンプレートリポジトリのGitHubページにアクセス
+2. 「Use this template」ボタンをクリック
+3. 新しいリポジトリ名を入力して作成
+4. 作成されたリポジトリをローカルにクローン
 
 ### 2. プロジェクト設定
 
@@ -149,6 +166,22 @@ MIT License - 自由に使用・改変可能です。
 ## 🤝 コントリビューション
 
 改善提案やバグ報告は歓迎します。Issue や Pull Request でお知らせください。
+
+## 🔄 テンプレートの更新
+
+テンプレートが更新された場合、既存のプロジェクトに最新の改善を取り込むことができます：
+
+```bash
+# テンプレートリポジトリをupstreamとして追加
+git remote add template https://github.com/[your-username]/spec-driven-development-template.git
+
+# テンプレートの更新を取得
+git fetch template
+
+# 必要に応じて特定のファイルをマージ
+git checkout template/main -- AGENTS.md
+git checkout template/main -- planning/templates/
+```
 
 ---
 
